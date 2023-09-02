@@ -24,7 +24,7 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        if (!extraCheeseAdded) {
+        if (!extraCheeseAdded&&price>0) {
             price += 80;
             bill.append("Extra Cheese Added: 80\n");
             extraCheeseAdded = true;
@@ -33,7 +33,7 @@ public class Pizza {
 
     public void addExtraToppings(){
         // your code goes here
-        if (!extraToppingsAdded) {
+        if (!extraToppingsAdded&&price>0) {
             price += (isVeg ? 70 : 120);
             bill.append("Extra Toppings Added: ").append(isVeg ? 70 : 120).append("\n");
             extraToppingsAdded = true;
@@ -42,7 +42,7 @@ public class Pizza {
 
     public void addTakeaway(){
         // your code goes here
-        if (!paperBagAdded) {
+        if (!paperBagAdded&&price>0) {
             price += 20;
             bill.append("Paperbag Added: 20\n");
             paperBagAdded = true;
